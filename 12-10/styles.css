@@ -96,7 +96,7 @@ body {
     border: 20px rgb(136, 157, 224) ridge;
 }
 
-.mainGameScreen, .coalMineGameScreen, .elfSchoolGameScreen, .hotChocolateBreweryGameScreen, .santasHomeGameScreen, .santasWorkshopGameScreen, .snowFactoryGameScreen {
+.mainGameScreen, .coalMineGameScreen, .elfSchoolGameScreen, .hotChocoLab, .santasHomeGameScreen, .santasWorkshopGameScreen, .snowFactoryGameScreen {
     position: relative;
     width: 100%;
     height: 100%;
@@ -115,7 +115,7 @@ body {
     background-image: url(../projectpictures/scenery/schoolclassroom.jpg)
 }
 
-.hotChocolateBreweryGameScreen {
+.hotChocoLab {
     background-image: url(../projectpictures/scenery/Chocolab.jpg);
 }
 
@@ -133,8 +133,10 @@ body {
 
 .goBack *{
     position: absolute;
-    width: 120px;
+    width: 80px;
     z-index: 50;
+    left: 10px;
+    top: 10px;
 }
 
 .mapIcons, .goBackButton {
@@ -142,9 +144,8 @@ body {
     flex-direction: row;
 }
 
-
 .goBack img:hover {
-    width: 130px;
+    width: 90px;
 }
 
 .lights {
@@ -252,8 +253,18 @@ body {
 }
 
 .GingerGerardas {
+    right: 320px;
+    top: 340px;
+}
+
+.Oompa {
+    right: 640px;
+    top: 380px;
+}
+
+.Loompa {
     right: 450px;
-    top: 240px;
+    top: 80px;
 }
 
 .characterNames, .characterText {
@@ -277,6 +288,42 @@ body {
     left: 215px;
     top: 610px;
 }
+
+#candyCane {
+    position: absolute;
+    opacity: 0.4;
+}
+
+.coalMineGameScreen #candyCane {
+    top: 180px;
+    left: 611px;
+}
+
+.hotChocoLab #candyCane {
+    right: 10px;
+    top: 392px;
+}
+
+.elfSchoolGameScreen #candyCane{
+    left: 18px;
+    top: 395px;
+}
+
+.snowFactoryGameScreen #candyCane{
+    right: 35px;
+    bottom: 170px;
+}
+
+.santasHomeGameScreen #candyCane {
+    left: 250px;
+    top: 160px;
+}
+
+.santasWorkshopGameScreen #candyCane {
+    right: 58px;
+    bottom: 133px;
+}
+
 
 @media screen and (max-width: 1240px) {
    
