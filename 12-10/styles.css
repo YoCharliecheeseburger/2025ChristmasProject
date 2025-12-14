@@ -19,6 +19,8 @@ body {
 }
 
 .AllowFlash {
+    position: fixed;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.644);
     min-width: 100%;
     height: 100vh;
@@ -32,10 +34,11 @@ body {
 .flashBox {
     background-color: white;
     font-family: sans-serif;
+    position: fixed;
+    top: 2vh;
+    left: 3vw;
     width: 260px;
     height: 120px;
-    margin-left: 3%;
-    margin-top: 2%;
     border: 2px rgb(172, 172, 172) solid;
     border-radius: 3px;
 }
@@ -289,52 +292,63 @@ body {
     top: 610px;
 }
 
-#candyCane {
+.candyCane {
     position: absolute;
     opacity: 0.4;
 }
 
-.coalMineGameScreen #candyCane {
+.coalMineGameScreen .candyCane {
     top: 180px;
     left: 611px;
 }
 
-.hotChocoLab #candyCane {
+.hotChocoLab .candyCane {
     right: 10px;
     top: 392px;
 }
 
-.elfSchoolGameScreen #candyCane{
+.elfSchoolGameScreen .candyCane{
     left: 18px;
     top: 395px;
 }
 
-.snowFactoryGameScreen #candyCane{
+.snowFactoryGameScreen .candyCane{
     right: 35px;
     bottom: 170px;
 }
 
-.santasHomeGameScreen #candyCane {
+.santasHomeGameScreen .candyCane {
     left: 250px;
     top: 160px;
 }
 
-.santasWorkshopGameScreen #candyCane {
+.santasWorkshopGameScreen .candyCane {
     right: 58px;
     bottom: 133px;
 }
 
 
 @media screen and (max-width: 1240px) {
-   
-    .AllowFlash {
-        min-width: 100vw;
-        position: fixed;
-    }
-
-    .AllowFlash, .gameCube {
+    .gameCube {
         left: 0;
-        top: 0;
     }
 
 }
+
+@media screen and (min-width: 1900px) {
+  .flashBox {
+    transform: scale(1.3);
+    top: 4vh;
+    left: 5vw;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .flashBox {
+    transform: scale(1.6);
+    top: 5vh;
+    left: 6vw;
+  }
+
+}
+

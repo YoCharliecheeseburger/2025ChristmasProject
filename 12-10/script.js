@@ -1,17 +1,3 @@
-function changeOpacity() {
-  document.getElementById("candyCane").style.opacity = "1";
-}
-
-const flashButton2 = document.querySelector('#flashButton2');
-const flashPrompt = document.querySelector('#flashPrompt');
-
-flashButton2.addEventListener('click', () => {
-    flashPrompt.hidden = true;
-    document.cookie = 'flashAllow=1; max-age=31536000; path=/;';
-})
-
-//ignore error outside of index.html
-
 function getCookie(name) {
   const cookies = document.cookie.split('; ');
 
@@ -22,14 +8,75 @@ function getCookie(name) {
       result = cookie.substring(name.length + 1);
     }
   });
-
   return result;
 }
 
-if (getCookie("flashAllow") === "1") {
-  flashPrompt.hidden = true;
+function setCookie(name, value) {
+  document.cookie = `${name}=${value}; path=/;`;
+}
+
+const flashButton2 = document.querySelector('#flashButton2');
+const flashPrompt = document.querySelector('#flashPrompt');
+
+if (flashButton2 && flashPrompt) {
+  flashButton2.addEventListener('click', () => {
+    flashPrompt.hidden = true;
+    setCookie('flashAllow', '1');
+  });
+
+  if (getCookie('flashAllow') === '1') {
+    flashPrompt.hidden = true;
+  }
 }
 
 
 
-//Create counter with JS: increment by 1 when click on candycane if already clicked don't count
+
+//credit to clanker for the candycanes
+const candyCounterContainer = document.getElementById('candyCounterContainer');
+
+fetch('../candycanecounter/candyCounter.html').then(res => res.text()).then(data => {
+    candyCounterContainer.innerHTML = data;
+
+    const candyCounter = document.getElementById('candyCounter');
+    const count = parseInt(getCookie('candyCount') || '0');
+    candyCounter.querySelector('.candyCountNumber').textContent = count;
+    candyCounter.style.opacity = count > 0 ? '1' : '0';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.candyCane').forEach(cane => {
+    const id = cane.dataset.id;
+
+    if (getCookie(`candyClicked_${id}`) === '1') {
+      cane.style.opacity = '1';
+      cane.style.pointerEvents = 'none';
+    } else {
+      cane.style.opacity = '0.4';
+    }
+
+    cane.addEventListener('click', () => clickCandy(cane));
+  });
+});
+
+function clickCandy(element) {
+  const id = element.dataset.id;
+
+  if (getCookie(`candyClicked_${id}`) === '1') return;
+
+  let candyCount = parseInt(getCookie('candyCount') || '0');
+  if (candyCount < 6) candyCount++;
+  setCookie('candyCount', candyCount);
+
+  setCookie(`candyClicked_${id}`, '1');
+
+  const candyCounter = document.getElementById('candyCounter');
+  if (candyCounter) {
+      candyCounter.style.opacity = '1';
+      candyCounter.querySelector('.candyCountNumber').textContent = candyCount;
+  }
+
+  element.style.opacity = '1';
+  element.style.pointerEvents = 'none';
+}
+
