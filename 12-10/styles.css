@@ -99,7 +99,7 @@ body {
     border: 20px rgb(136, 157, 224) ridge;
 }
 
-.mainGameScreen, .coalMineGameScreen, .elfSchoolGameScreen, .hotChocoLab, .santasHomeGameScreen, .santasWorkshopGameScreen, .snowFactoryGameScreen {
+.mainGameScreen, .coalMineGameScreen, .coalMineTwoGameScreen, .elfSchoolGameScreen, .hotChocoLab, .santasHomeGameScreen, .santasWorkshopGameScreen, .snowFactoryGameScreen {
     position: relative;
     width: 100%;
     height: 100%;
@@ -112,6 +112,10 @@ body {
 
 .coalMineGameScreen {
     background-image: url(../projectpictures/scenery/prison.jpg);
+}
+
+.coalMineTwoGameScreen {
+    background-image: url(../projectpictures/scenery/caveTwo.jpg);
 }
 
 .elfSchoolGameScreen {
@@ -166,7 +170,7 @@ body {
     width: 80px;
 }
 
-.hotChocolateBrewery {
+.hotChocolateLab {
     right: 230px;
     top: 450px;
 }
@@ -174,7 +178,12 @@ body {
 .coalMine {
     left: 290px;
     top: 160px;
-} 
+}
+
+.coalMineTwo {
+    left: 560px;
+    top: 440px;
+}
 
 .santasHome {
     left: 450px;
@@ -183,12 +192,12 @@ body {
 
 .santasWorkshop {
     bottom: 160px;
-    left: 50px;
+    left: 55px;
 }
 
 .elfSchool {
     top: 60px;
-    left: 25px;
+    left: 30px;
 }
 
 .snowFactory {
@@ -205,6 +214,70 @@ body {
 }
 
 
+
+
+.iconNameTag {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.iconNameTag * {
+    position: absolute;
+}
+
+.iconNameTag img {
+    width: 100%;
+}
+
+.iconNameTag h3 {
+    z-index: 10;
+    width: 100%;
+    top: 3px;
+}
+
+.snowFactoryIconNameTag {
+    width: 170px;
+    right: 200px;
+    top: 315px;
+}
+
+.hotChocolateLabIconNameTag {
+    width: 170px;
+    right: 180px;
+    top: 420px;
+}
+
+.coalMineIconNameTag {
+    width: 170px;
+    left: 240px;
+    top: 210px
+}
+
+.santasHomeIconNameTag {
+    width: 170px;
+    left: 400px;
+    top: 275px;
+}
+
+.santasWorkshopIconNameTag {
+    width: 200px;
+    left: 1px;
+    bottom: 200px;
+}
+
+.santasWorkshopIconNameTag h3 {
+    top: 5px;
+}
+
+.elfSchoolIconNameTag {
+    width: 150px;
+    left: 1px;
+    top: 140px;
+}
+
+
+
 .popup {
     display: none;
     justify-content: center;
@@ -216,21 +289,30 @@ body {
     height: 100%;
     z-index: 100;
 }
+
+.narratorPopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 150px;
+    width: 1200px;
+    z-index: 100;
+}
   
 .popup:target {
     display: flex; 
 }
 
-.characters *, .characterText, .characterNames, .characterNamesFlipped {
+.characters *, .characterText, .characterNames, .characterNamesFlipped, .narratorName, .narratorText, .gameNarratorMe {
     position: absolute;
 }
 
-.SnolfSnowler img {
+.Oskaras img {
     width: 400px;
 }
 
-
-.SnolfSnowler {
+.Oskaras {
     right: 550px;
     top: 240px;
 }
@@ -241,13 +323,18 @@ body {
     z-index: 50;
 }
 
-.yeti {
+.elfSaulius {
+    left: 100px;
+    top: 30px;
+}
+
+.Naglis {
     left: 100px;
     top: 260px;
 }
 
 .santa {
-    right: 400px;
+    right: 470px;
     top: 240px;
 }
 
@@ -260,17 +347,51 @@ body {
     top: 340px;
 }
 
-.Oompa {
+.GingerGerardas img {
+    height: 370px;
+    width: 220px;
+}
+
+.GingerKajus img {
+    height: 220px;
+    width: 200px;
+}
+
+.GingerKajus {
+    right: 700px;
+    top: 215px;
+}
+
+.Ernestas {
     right: 640px;
     top: 380px;
 }
 
-.Loompa {
+.Armandas {
     right: 450px;
     top: 80px;
 }
 
-.characterNames, .characterText {
+.AleksasTheHolySpirit {
+    right: 300px;
+    top: 50px;
+}
+
+.Eimantas {
+    left: 300px;
+    top: 200px;
+}
+
+.gameNarratorMe img {
+    width: 500px;
+}
+
+.gameNarratorMe {
+    right: 0;
+    bottom: 0;
+}
+
+.characterNames, .characterText, .narratorText, .narratorName {
     color: #830000;
     font-size: 25px;
 }
@@ -288,6 +409,8 @@ body {
 }
 
 .characterText {
+    width: 750px;
+    height: 50px;
     left: 215px;
     top: 610px;
 }
