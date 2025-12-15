@@ -72,13 +72,16 @@ function clickCandy(element) {
 
   const candyCounter = document.getElementById('candyCounter');
   if (candyCounter) {
-      candyCounter.style.opacity = '1';
-      candyCounter.querySelector('.candyCountNumber').textContent = candyCount;
+    candyCounter.style.opacity = '1';
+    candyCounter.querySelector('.candyCountNumber').textContent = candyCount;
   }
 
   element.style.opacity = '1';
   element.style.pointerEvents = 'none';
 }
+
+
+
 
 function beGoneScreen() {
   document.getElementById("deleteScreen").style.background = "black";
@@ -89,7 +92,15 @@ function beGoneScreen() {
   document.getElementById("nuked5").src = "";
   document.getElementById("nuked6").src = "";
 
-  setTimeout(alertMessage, 2000)
+  document.querySelectorAll('.iconNameTag').forEach(tag => {
+    tag.style.display = 'none';
+  });
+
+  document.querySelectorAll('.characters a').forEach(character => {
+    character.style.display = 'none';
+  });
+
+  setTimeout(alertMessage, 2000);
 }
 
 function alertMessage() {

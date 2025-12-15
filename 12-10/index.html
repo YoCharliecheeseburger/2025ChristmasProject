@@ -14,93 +14,83 @@
 <body>
   <div id="candyCounterContainer"></div>
 
-  <!--
-  unfinished doesnt work
-  
   <div id="flashPrompt" class="AllowFlash">
     <div class="flashBox">
       <div class="flashPopUpContent">
         <h5>This website wants to</h5>
-        <a href="#" class="close"></a>
+        <a href="#"></a>
         <img class="flashIcon" src="../projectpictures/Icons/flashIcon.png">
         <p>Run Flash</p>
         <a href="" class="flashButton1">Block</a>
-        <a href="#popup1" id="flashButton2">Allow</a>
+        <a href="#" id="flashButton2">Allow</a>
       </div>
     </div>
   </div>
 
-  <div class="narratorPopup" id="popup1">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <div class="characters">
-        <a class="gameNarratorMe"><img src="../projectpictures/characters/Narrator.png"></a>
-      </div>
-      <a href="#popup2"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>Hi there!</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="narratorPopup" id="popup2">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <a href="#popup3"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>Welcome to this lovely Christmas Village.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="narratorPopup" id="popup3">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <a href="#popup4"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>I bet you're wondering what these places are!</p>
-      </div>
-    </div>
-  </div>
- 
-  <div class="narratorPopup" id="popup4">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <a href="#popup5"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>Here they prepare and make everything Christmas themed just for us all.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="narratorPopup" id="popup4">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <a href="#popup5"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>But they're really underemployed right now... a lot of candy canes are missing.. It'd be great if you found the candy canes for them!</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="narratorPopup" id="popup4">
-    <div class="popup-content">
-      <a href="#" class="close"></a>
-      <a href="#popup5"><img src="../projectpictures/characters/textBox.png"></a>
-      <h1 class="narratorName">Narrator</h1>
-      <div class="narratorText">
-        <p>And return peace to this world once again. Good luck!</p>
-      </div>
-    </div>
-  </div>-->
-  
   <div class="gameCube">
     <div class="mainGameScreen" id="deleteScreen">
+
+      <div class="characters">
+        <a href="#popup1" class="hoboSimona"><img src="../projectpictures/characters/Narrator.png"></a>
+        <a href="#popup10" class="grinchAleksas"><img src="../projectpictures/characters/AleksasTheGrinch.png"></a>
+      </div>
+
+      <div class="popup" id="popup1">
+        <a href="#"></a>
+        <a href="#popup2"><img src="../projectpictures/characters/textBox.png"></a>
+        <h1 class="characterNames">Hobo Simona</h1>
+        <div class="characterText">
+          <p>The elves took all the nice houses.. eugh</p>
+        </div>
+      </div>
+
+      <div class="popup" id="popup2">
+          <a href="#"></a>
+          <a href="#popup3"><img src="../projectpictures/characters/textBox.png"></a>
+          <h1 class="characterNames">Hobo Simona</h1>
+          <div class="characterText">
+            <p>I was planning to team up with Grinch to get free housing but...<br>
+            people have been saying he's gonna set off a nuke today, so we'll see how that goes I guess!
+            </p>
+          </div>
+      </div>
+
+      <div class="popup" id="popup3">
+        <a href="#"></a>
+        <a href="#popup4"><img src="../projectpictures/characters/textBox.png"></a>
+        <h1 class="characterNames">Hobo Simona</h1>
+        <div class="characterText">
+          <p>you should find him somewhere around here. He's just a green fella.</p>
+        </div>
+      </div>
+
+      <div class="popup" id="popup2">
+        <a href="#"></a>
+        <a href="#popup3"><img src="../projectpictures/characters/textBox.png"></a>
+        <h1 class="characterNames">Hobo Simona</h1>
+        <div class="characterText">
+          <p>Merry Christmas traveler!</p>
+        </div>
+      </div>
+
+      <div class="popup" id="popup10">
+        <a href="#"></a>
+        <a href="#popup11"><img src="../projectpictures/characters/longerTextBox.png"></a>
+        <h1 class="characterNames">Aleksas The Grinch</h1>
+        <div class="characterText">
+          <p>I hate this stupid holiday..</p>
+        </div>
+      </div>
+
+      <div class="popup" id="popup11">
+        <a href="#"></a>
+        <a href="#popup13"><img src="../projectpictures/characters/longerTextBox.png"></a>
+        <h1 class="characterNames">Aleksas The Grinch</h1>
+        <div class="characterText">
+          <p>BURNT TREE BURN!!</p>
+        </div>
+      </div>
+
       <div class="mapIcons">
         <div class="snowFactory"><a href="../pages/snowFactory.html"><img id='nuked' src="../projectpictures/Icons/snowFactoryIcon.png"></a></div>
         <div class="snowFactoryIconNameTag iconNameTag">
@@ -114,7 +104,7 @@
         </div>
         <div class="elfSchool"><a href="../pages/elfSchool.html"><img id='nuked3' class="bigger" src="../projectpictures/Icons/elfSchoolIcon.png"></a></div>
         <div class="elfSchoolIconNameTag iconNameTag">
-          <h3>elf School</h3>
+          <h3>Elf School</h3>
           <img src="../projectpictures/Icons/iconTag.png">
         </div>
         <div class="santasHome"><a href="../pages/santasHome.html"><img id='nuked4' class="bigger" src="../projectpictures/Icons/santasHomeIcon.png"></a></div>
